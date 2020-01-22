@@ -1,0 +1,40 @@
+name: minecraft-launcher-ot
+title: Minecraft Launcher
+version: '2'
+summary: Other Linux Minecraft Launcher
+description: |
+        "Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"
+confinement: strict
+base: core18
+icon: snap/gui/minecraft-launcher-ot.svg
+
+parts:
+  minecraft-launcher:
+    plugin: dump
+    source: https://launcher.mojang.com/download/Minecraft.tar.gz
+    build-packages:
+      - ca-certificates
+      - ca-certificates-java
+    stage-packages:
+      - default-jre
+      - libnspr4
+      - libnss3
+      - gconf2
+      - libxss1
+      - libgtk2.0-0
+      - libcurl3
+
+apps:
+  minecraft-launcher-ot:
+    command: minecraft-launcher
+    environment:
+      JAVA_HOME: $SNAP/usr/lib/jvm/default-java
+      PATH: $JAVA_HOME/jre/bin:$PATH
+    extensions: [gnome-3-28]
+    plugs:
+      - gsettings
+      - home
+      - network
+      - browser-support
+      - audio-playback
+      - opengl
