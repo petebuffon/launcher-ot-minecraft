@@ -1,6 +1,6 @@
 name: minecraft-launcher-ot
 title: Minecraft Launcher
-version: '2'
+version: '3'
 summary: Other Linux Minecraft Launcher
 description: |
         "Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"
@@ -37,4 +37,5 @@ apps:
       - network
       - browser-support
       - audio-playback
+      - pulseaudio
       - opengl
