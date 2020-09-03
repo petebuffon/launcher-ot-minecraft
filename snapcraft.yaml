@@ -17,12 +17,8 @@ parts:
       - ca-certificates-java
     stage-packages:
       - default-jre
-      - libnspr4
-      - libnss3
-      - gconf2
       - libxss1
-      - libgtk2.0-0
-      - libcurl3
+      - libcurl4
 
 apps:
   minecraft-launcher-ot:
