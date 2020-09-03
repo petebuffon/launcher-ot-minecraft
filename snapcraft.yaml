@@ -1,6 +1,6 @@
 name: minecraft-launcher-ot
 title: Minecraft Launcher
-version: '18'
+version: '19'
 summary: Other Linux Minecraft Launcher
 description: |
         "Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"
@@ -30,7 +30,7 @@ apps:
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/default-java
       PATH: $JAVA_HOME/jre/bin:$PATH
-    extensions: [gnome-3-28]
+    extensions: [gnome-3-34]
     plugs:
       - gsettings
       - home
@@ -38,3 +38,5 @@ apps:
       - browser-support
       - audio-playback
       - opengl
+      - x11
+      - wayland
