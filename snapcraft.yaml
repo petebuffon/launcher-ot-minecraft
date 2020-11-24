@@ -24,7 +24,7 @@ parts:
       - default-jre
       - libxss1
       - libcurl4
-      - libgtk2.0-0
+      - libgles2-mesa
 
 apps:
   minecraft-launcher-ot:
@@ -32,7 +32,7 @@ apps:
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/default-java
       PATH: $JAVA_HOME/jre/bin:$PATH
-    extensions: [gnome-3-34]
+    extensions: [gnome-3-28]
     plugs:
       - gsettings
       - home
