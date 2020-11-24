@@ -1,6 +1,6 @@
 name: minecraft-launcher-ot
 title: Minecraft Launcher
-version: '21'
+version: '22'
 summary: Other Linux Minecraft Launcher
 description: |
         "Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"
@@ -24,6 +24,7 @@ parts:
       - default-jre
       - libxss1
       - libcurl4
+      - libgtk2.0-0
 
 apps:
   minecraft-launcher-ot:
