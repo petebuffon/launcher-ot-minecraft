@@ -24,7 +24,7 @@ parts:
       - default-jre
       - libxss1
       - libcurl4
-      - libgles2-mesa
+      - libgtk2.0-0
 
 apps:
   minecraft-launcher-ot:
