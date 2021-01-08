@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: version update
       run: |
-        apt-get update && apt-get install -y python3-setuptools
+        sudo apt-get update && sudo apt-get install -y python3-setuptools
         wget https://launcher.mojang.com/download/Minecraft.tar.gz
         tar xfvz Minecraft.tar.gz
         python3 -m pip install PyYaml
