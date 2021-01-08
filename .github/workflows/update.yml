@@ -19,8 +19,8 @@ jobs:
     - name: version update
       run: |
         sudo apt-get update && sudo apt-get install -y python3-setuptools
-        cd /tmp && wget https://launcher.mojang.com/download/Minecraft.tar.gz
-        tar xfvz Minecraft.tar.gz
+        wget -o /tmp/Minecraft.tar.gz https://launcher.mojang.com/download/Minecraft.tar.gz
+        tar xfvz /tmp/Minecraft.tar.gz
         python3 -m pip install PyYaml
         VERSION=$(python3 .github/workflows/version.py /tmp/minecraft-launcher/minecraft-launcher)
         echo $VERSION
