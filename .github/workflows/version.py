@@ -25,3 +25,4 @@ else:
     snapcraft["version"] = version
     with open("snapcraft.yaml", "w") as f:
         f.write(yaml.dump(snapcraft))
+    return version
