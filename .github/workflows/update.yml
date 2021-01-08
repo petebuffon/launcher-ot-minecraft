@@ -23,9 +23,11 @@ jobs:
         tar xfvz Minecraft.tar.gz
         python3 -m pip install PyYaml
         VERSION=$(python3 .github/workflows/version.py minecraft-launcher/minecraft-launcher)
+        rm Minecraft.tar.gz
+        rm -r minecraft-launcher
         git config user.name petebuffon
         git config user.email pabuffon@gmail.com
-        git commit -m "version update"
+        git commit -am "version update"
         git tag -a $(VERSION)
         git push --tags
     - uses: snapcore/action-build@v1
