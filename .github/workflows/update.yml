@@ -20,7 +20,7 @@ jobs:
       run: |
         sudo apt-get update && sudo apt-get install -y python3-setuptools
         python3 -m pip install PyYaml
-        cd /tmp && https://launcher.mojang.com/download/Minecraft.tar.gz
+        cd /tmp && wget https://launcher.mojang.com/download/Minecraft.tar.gz
         tar xfvz /tmp/Minecraft.tar.gz
         cd ~/
         VERSION=$(python3 .github/workflows/version.py /tmp/minecraft-launcher/minecraft-launcher)
