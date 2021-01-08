@@ -9,9 +9,7 @@ base: core18
 icon: snap/gui/minecraft-launcher-ot.svg
 architectures:
   - build-on: arm64
-  - build-on: armhf
-  - build-on: amd64
-  - build-on: i386
+  - run-on: [amd64, i386, arm64, armhf]
 
 parts:
   minecraft-launcher:
