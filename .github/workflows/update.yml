@@ -16,15 +16,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: |
-      wget https://launcher.mojang.com/download/Minecraft.tar.gz
-      tar xfvz Minecraft.tar.gz
-      python3 .github/workflows/version.py minecraft-launcher/minecraft-launcher
-      python3 -m pip install PyYaml
-      git config user.name petebuffon
-      git config user.email pabuffon@gmail.com
-      git commit -m "version update"
-      git push
+    - name: version update
+      run: |
+        wget https://launcher.mojang.com/download/Minecraft.tar.gz
+        tar xfvz Minecraft.tar.gz
+        python3 -m pip install PyYaml
+        VERSION=$(python3 .github/workflows/version.py minecraft-launcher/minecraft-launcher)
+        git config user.name petebuffon
+        git config user.email pabuffon@gmail.com
+        git commit -m "version update"
+        git tag -a $(VERSION)
+        git push --tags
     - uses: snapcore/action-build@v1
       id: build
     - uses: snapcore/action-publish@v1
