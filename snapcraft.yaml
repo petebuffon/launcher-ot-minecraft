@@ -8,7 +8,7 @@ confinement: strict
 base: core18
 icon: snap/gui/minecraft-launcher-ot.svg
 architectures:
-  - build-on: arm64
+  - build-on: amd64
   - run-on: [amd64, i386, arm64, armhf]
 
 parts:
