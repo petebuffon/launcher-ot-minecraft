@@ -18,10 +18,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: version update
       run: |
-        pwd
         sudo apt-get update && sudo apt-get install -y python3-setuptools
         python3 -m pip install PyYaml
         cd /tmp && wget https://launcher.mojang.com/download/Minecraft.tar.gz
         tar xfvz /tmp/Minecraft.tar.gz
-        VERSION=$(python3 ~/minecraft-launcher-ot/.github/workflows/version.py /tmp/minecraft-launcher/minecraft-launcher)
+        VERSION=$(python3 ~/work/minecraft-launcher-ot/minecraft-launcher-ot/.github/workflows/version.py /tmp/minecraft-launcher/minecraft-launcher)
         echo $VERSION
