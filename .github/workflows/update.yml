@@ -26,6 +26,8 @@ jobs:
         ls -a
         ls .github
         VERSION=$(python3 .github/workflows/version.py /tmp/minecraft-launcher/minecraft-launcher)
+        git config --global user.email "pabuffon@gmail.com"
+        git config --global user.name "Pete Buffon"
         git tag $VERSION
         git commit -am "version update"
         git push --tags
