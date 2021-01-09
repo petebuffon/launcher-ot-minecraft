@@ -26,4 +26,6 @@ jobs:
         ls -a
         ls .github
         VERSION=$(python3 .github/workflows/version.py /tmp/minecraft-launcher/minecraft-launcher)
-        echo $VERSION
+        git tag $VERSION
+        git commit -am "version update"
+        git push --tags
