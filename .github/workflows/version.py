@@ -15,11 +15,14 @@ for char in text[version_position:]:
     if char == "\x00":
         break
     version += char
-
+    
 with open("snapcraft.yaml") as f:
     snapcraft = yaml.safe_load(f.read())
 
-snapcraft["version"] = version
-with open("snapcraft.yaml", "w") as f:
-    f.write(yaml.dump(snapcraft))
-print(version)
+if snapcraft["version"] == version:
+    print("no commit needed")
+else:
+    snapcraft["version"] = version
+    with open("snapcraft.yaml", "w") as f:
+        f.write(yaml.dump(snapcraft))
+    print(version)
