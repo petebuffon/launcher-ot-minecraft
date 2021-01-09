@@ -19,10 +19,7 @@ for char in text[version_position:]:
 with open("snapcraft.yaml") as f:
     snapcraft = yaml.safe_load(f.read())
 
-if snapcraft["version"] == version:
-    exit("Already at latest version.")
-else:
-    snapcraft["version"] = version
-    with open("snapcraft.yaml", "w") as f:
-        f.write(yaml.dump(snapcraft))
-    print(version)
+snapcraft["version"] = version
+with open("snapcraft.yaml", "w") as f:
+    f.write(yaml.dump(snapcraft))
+print(version)
