@@ -18,6 +18,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: version update
       run: |
+        ls -a ~/minecraft-launcher-ot
+        ls -a ~/minecraft-launcher-ot/.github/workflows
         sudo apt-get update && sudo apt-get install -y python3-setuptools
         python3 -m pip install PyYaml
         cd /tmp && wget https://launcher.mojang.com/download/Minecraft.tar.gz
