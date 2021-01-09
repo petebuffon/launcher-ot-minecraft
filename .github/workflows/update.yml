@@ -22,7 +22,8 @@ jobs:
         python3 -m pip install PyYaml
         cd /tmp && wget https://launcher.mojang.com/download/Minecraft.tar.gz
         tar xfvz /tmp/Minecraft.tar.gz
-        cd ~/
+        cd ~/ && ls
+        cd ~/minecraft-launcher-ot
         VERSION=$(python3 .github/workflows/version.py /tmp/minecraft-launcher/minecraft-launcher)
         echo $VERSION
 
