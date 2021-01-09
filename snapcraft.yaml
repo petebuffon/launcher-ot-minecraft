@@ -16,12 +16,8 @@ apps:
     - x11
     - wayland
 architectures:
-- build-on: amd64
-- run-on:
-  - amd64
-  - i386
-  - arm64
-  - armhf
+  - build-on: amd64
+    run-on: [amd64, arm64, armhf, i386]
 base: core18
 confinement: strict
 description: '"Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"
