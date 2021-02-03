@@ -17,12 +17,9 @@ apps:
     - wayland
 architectures:
   - build-on: amd64
-    run-on: [amd64, arm64, armhf, i386]
 base: core18
 confinement: strict
-description: '"Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"
-
-  '
+description: '"Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"'
 icon: snap/gui/minecraft-launcher-ot.svg
 name: minecraft-launcher-ot
 parts:
