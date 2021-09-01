@@ -36,4 +36,4 @@ parts:
     - libgtk2.0-0
 summary: Other tarball launcher for Minecraft
 title: Launcher for Minecraft
-version: 2.2.909
+version: "928"
