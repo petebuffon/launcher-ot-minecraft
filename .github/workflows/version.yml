@@ -22,5 +22,5 @@ jobs:
         run: |
           wget https://launcher.mojang.com/download/Minecraft.tar.gz
           tar xfvz Minecraft.tar.gz
-          python3 .github/workflows/version.py minecraft-launcher/minecraft-launcher
+          python3 .github/workflows/version.py launcher-minecraft/launcher-minecraft
           python3 -m pip install PyYaml
