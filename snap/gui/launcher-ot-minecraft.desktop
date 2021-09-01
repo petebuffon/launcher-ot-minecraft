@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Launcher for Minecraft
+Comment=Launcher for Minecraft
+Exec=launcher-ot-minecraft
+Path=launcher-ot-minecraft
+Icon=${SNAP}/meta/gui/launcher-ot-minecraft.png
+Terminal=false
+Categories=Game;Application;
