@@ -19,7 +19,6 @@ architectures:
   - build-on: amd64
 base: core18
 confinement: strict
-description: '"Other tarball launcher for Minecraft: Java Edition."'
 icon: snap/gui/launcher-ot-minecraft.png
 name: launcher-ot-minecraft
 parts:
