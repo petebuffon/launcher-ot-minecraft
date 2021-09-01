@@ -1,6 +1,6 @@
 apps:
-  minecraft-launcher-ot:
-    command: minecraft-launcher
+  launcher-ot-minecraft:
+    command: launcher-minecraft
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/default-java
       PATH: $JAVA_HOME/jre/bin:$PATH
@@ -19,11 +19,11 @@ architectures:
   - build-on: amd64
 base: core18
 confinement: strict
-description: '"Other Linux version of the Minecraft Launcher for Minecraft: Java Edition"'
-icon: snap/gui/minecraft-launcher-ot.svg
-name: minecraft-launcher-ot
+description: '"Other tarball launcher for Minecraft: Java Edition."'
+icon: snap/gui/launcher-ot-minecraft.png
+name: launcher-ot-minecraft
 parts:
-  minecraft-launcher:
+  launcher-minecraft:
     build-packages:
     - ca-certificates
     - ca-certificates-java
@@ -34,6 +34,6 @@ parts:
     - libxss1
     - libcurl4
     - libgtk2.0-0
-summary: Other Linux Minecraft Launcher
-title: Minecraft Launcher
+summary: Other tarball launcher for Minecraft
+title: Launcher for Minecraft
 version: 2.2.909
