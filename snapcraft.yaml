@@ -1,6 +1,6 @@
 apps:
   launcher-ot-minecraft:
-    command: launcher-minecraft
+    command: minecraft-launcher
     environment:
       JAVA_HOME: $SNAP/usr/lib/jvm/default-java
       PATH: $JAVA_HOME/jre/bin:$PATH
@@ -23,7 +23,7 @@ description: "Other tarball launcher for Minecraft: Java Edition installable via
 icon: snap/gui/launcher-ot-minecraft.png
 name: launcher-ot-minecraft
 parts:
-  launcher-minecraft:
+  minecraft-launcher:
     build-packages:
     - ca-certificates
     - ca-certificates-java
