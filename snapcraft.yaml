@@ -7,6 +7,7 @@ apps:
     extensions:
     - gnome-3-28
     plugs:
+    - password-manager-service
     - gsettings
     - home
     - network
