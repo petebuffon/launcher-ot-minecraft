@@ -5,9 +5,8 @@ apps:
       JAVA_HOME: $SNAP/usr/lib/jvm/default-java
       PATH: $JAVA_HOME/jre/bin:$PATH
     extensions:
-    - gnome-3-28
+    - gnome-3-38
     plugs:
-    - password-manager-service
     - gsettings
     - home
     - network
@@ -20,7 +19,7 @@ architectures:
   - build-on: amd64
 base: core18
 confinement: strict
-description: "Other tarball launcher for Minecraft: Java Edition installable via Snap. Implemented using the core18 base and gnome-3-28 extension.\n*Not official Minecraft product. Not approved by or associated with Mojang.*"
+description: "Other tarball launcher for Minecraft: Java Edition installable via Snap. Implemented using the core20 base and gnome-3-34 extension.\n*Not official Minecraft product. Not approved by or associated with Mojang.*"
 icon: snap/gui/launcher-ot-minecraft.png
 name: launcher-ot-minecraft
 parts:
@@ -34,7 +33,6 @@ parts:
     - default-jre
     - libxss1
     - libcurl4
-    - libgtk2.0-0
 summary: Other tarball launcher for Minecraft
 title: Launcher for Minecraft
-version: "928"
+version: "1035"
