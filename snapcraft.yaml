@@ -16,10 +16,13 @@ apps:
     - x11
     - wayland
 architectures:
-  - build-on: amd64
+- build-on: amd64
 base: core20
 confinement: strict
-description: "Other tarball launcher for Minecraft: Java Edition installable via Snap. Implemented using the core20 base and gnome-3-34 extension.\n*Not official Minecraft product. Not approved by or associated with Mojang.*"
+description: 'Other tarball launcher for Minecraft: Java Edition installable via Snap.
+  Implemented using the core20 base and gnome-3-34 extension.
+
+  *Not official Minecraft product. Not approved by or associated with Mojang.*'
 icon: snap/gui/launcher-ot-minecraft.png
 name: launcher-ot-minecraft
 parts:
@@ -35,4 +38,4 @@ parts:
     - libcurl4
 summary: Other tarball launcher for Minecraft
 title: Launcher for Minecraft
-version: "1035"
+version: '1121'
