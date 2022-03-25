@@ -29,9 +29,8 @@ jobs:
           git config --global user.email "pabuffon@gmail.com"
           git config --global user.name "Pete Buffon"
           git add -A
-          git tag $VERSION
           git commit -m "version update"
-          git push origin --tags
+          git push origin
         fi
     - uses: snapcore/action-build@v1
       id: build
