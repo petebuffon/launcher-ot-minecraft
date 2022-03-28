@@ -2,7 +2,7 @@ apps:
   launcher-ot-minecraft:
     command: minecraft-launcher
     environment:
-      JAVA_HOME: $SNAP/usr/lib/jvm/default-java
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-17-openjdk-amd64/
       PATH: $JAVA_HOME/jre/bin:$PATH
     extensions:
     - gnome-3-38
@@ -28,12 +28,13 @@ name: launcher-ot-minecraft
 parts:
   minecraft-launcher:
     build-packages:
+    - openjdk-17-jre-headless  
     - ca-certificates
     - ca-certificates-java
     plugin: dump
     source: https://launcher.mojang.com/download/Minecraft.tar.gz
     stage-packages:
-    - default-jre
+    - openjdk-17-jre-headless  
     - libxss1
     - libcurl4
 summary: Other tarball launcher for Minecraft
