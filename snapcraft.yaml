@@ -28,15 +28,15 @@ name: launcher-ot-minecraft
 parts:
   minecraft-launcher:
     build-packages:
-    - openjdk-17-jre-headless  
+    - openjdk-17-jre-headless
     - ca-certificates
     - ca-certificates-java
     plugin: dump
     source: https://launcher.mojang.com/download/Minecraft.tar.gz
     stage-packages:
-    - openjdk-17-jre-headless  
+    - openjdk-17-jre-headless
     - libxss1
     - libcurl4
 summary: Other tarball launcher for Minecraft
 title: Launcher for Minecraft
-version: '1121'
+version: 1.0.1221
